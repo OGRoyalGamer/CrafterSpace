@@ -500,3 +500,7 @@ body.dark-view .site-footer {
     background-color: #070a10;
     border-top-color: #111827;
 }
+
+style.css ke bilkul END me paste karo:
+
+`/* ========================= MOBILE RESPONSIVE FIX ========================= */``@media (max-width: 768px) {` `.hero h1 {` `font-size: 3rem; /* CrafterSpace text chhota */` `line-height: 1.1;` `word-break: break-word;` `}` `.hero p {` `font-size: 1.2rem;` `padding: 0 20px;` `}` `.hero-logo {` `width: 140px;` `height: auto;` `}` `.search-container {` `width: 100%;` `padding: 0 20px;` `box-sizing: border-box;` `}` `#searchInput {` `width: 100%;` `box-sizing: border-box;` `}` `.site-footer {` `width: 100%;` `box-sizing: border-box;` `padding: 25px 20px;` `}` `.footer-content {` `width: 100%;` `max-width: 100%;` `box-sizing: border-box;` `}` `.disclaimer-text {` `font-size: 0.95rem;` `line-height: 1.8;` `}``}`
