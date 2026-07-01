@@ -178,49 +178,5 @@
 
     <script src="script.js"></script>
 
-    <!-- 🔐 LOGIN / SIGNUP MODAL BOX -->
-<div id="auth-modal" class="auth-overlay">
-    <div class="auth-box">
-        <h2 id="auth-title">Sign In to CrafterSpace</h2>
-        <p class="auth-subtitle">Access High-Quality Minecraft PNGs</p>
-        
-        <form id="auth-form" onsubmit="event.preventDefault();">
-            <!-- Email Input -->
-            <div class="input-group">
-                <label>Email Address</label>
-                <input type="email" id="auth-email" placeholder="Enter your email" required>
-            </div>
-            
-            <!-- Password Input -->
-            <div class="input-group" id="password-group">
-                <label>Password</label>
-                <input type="password" id="auth-password" placeholder="Enter password">
-            </div>
-
-            <!-- Forgot Password Link -->
-            <div class="form-options" id="forgot-link-area">
-                <a href="#" onclick="showForgotPassword()" class="forgot-btn">Forgot Password?</a>
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" id="main-auth-btn" class="submit-btn">Sign In</button>
-        </form>
-
-        <div class="divider"><span>OR</span></div>
-
-        <!-- Google Sign-In Button -->
-        <button class="google-btn" onclick="handleGoogleLogin()">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo">
-            Continue with Google
-        </button>
-
-        <!-- Toggle between Login and Signup -->
-        <p class="switch-auth-text">
-            <span id="auth-switch-prompt">Don't have an account?</span> 
-            <a href="#" id="auth-switch-link" onclick="toggleAuthMode()">Sign Up</a>
-        </p>
-    </div>
-</div>
-
 </body>
 </html>
