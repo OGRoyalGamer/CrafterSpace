@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrafterSpace</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Hamburger Button -->
+
+<div class="menu-btn" onclick="openMenu()"> ☰ </div>
+
+<!-- Side Menu -->
+
+<div id="sideMenu" class="side-menu">
+
+<span class="close-btn" onclick="closeMenu()">
+    ×
+</span>
+
+<a href="#">Home</a>
+
+<a href="#contact">
+    Contact
+</a>
+
+<a href="https://youtube.com/@RoyalGamerRG06"
+   target="_blank">
+   YouTube
+</a>
+
+<a href="mailto:youremail@gmail.com">
+   Email
+</a>
+
+<a href="https://beacons.ai/ogroyalgamer" target="_blank">
+    Beacons
+</a>
+
+</div>
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <img src="Crafting_Table_29_JE1.webp" class="hero-logo">
+
+        <h1>CrafterSpace</h1>
+
+        <p>Download High Quality Minecraft PNGs</p>
+
+    </section>
+
+    <!-- Search -->
+    <div class="search-container">
+
+        <input
+        type="text"
+        id="searchInput"
+        placeholder="Search PNGs...">
+
+    </div>
+
+    <!-- PNG Grid -->
+
+    <section class="png-grid">
+
+        <div class="card">
+            <img src="trial_key.png" alt="Trial Key">
+            <p>Trial Key</p>
+        </div>
+
+        <div class="card">
+            <img src="trident.png" alt="Trident">
+            <p>Trident</p>
+        </div>
+
+        <div class="card">
+            <img src="water_bucket.png" alt="Water Bucket">
+            <p>Water Bucket</p>
+        </div>
+
+        <div class="card">
+            <img src="anvil.png" alt="Anvil">
+            <p>Anvil</p>
+        </div>
+
+        <div class="card">
+            <img src="autocrafter.png" alt="Autocrafter">
+            <p>Auto Crafter</p>
+        </div>
+
+        <div class="card">
+            <img src="bamboo_raft.png" alt="Bamboo Raft">
+            <p>Bamboo Raft</p>
+        </div>
+
+        <div class="card">
+            <img src="mace.png" alt="Mace">
+            <p>Mace</p>
+        </div>
+
+        <div class="card">
+            <img src="bow.png" alt="Bow">
+            <p>Bow</p>
+        </div>
+
+        <div class="card">
+            <img src="crafting-table.png" alt="Crafting Table">
+            <p>Crafting Table</p>
+        </div>
+
+        <div class="card">
+            <img src="carrot.png" alt="Carrot">
+            <p>Carrot</p>
+        </div>
+
+        <div class="card">
+            <img src="bread.png" alt="Bread">
+            <p>Bread</p>
+        </div>
+
+        <div class="card">
+            <img src="chest.png" alt="Chest">
+            <p>Chest</p>
+        </div>
+
+        <div class="card">
+            <img src="furnace.png" alt="Furnace">
+            <p>Furnace</p>
+        </div>
+
+        <div class="card">
+            <img src="smoker.png" alt="Smoker">
+            <p>Smoker</p>
+        </div>
+
+
+    </section>
+
+    <!-- Popup -->
+
+    <div class="popup" id="popup">
+
+        <div class="popup-content">
+
+            <span class="close">&times;</span>
+
+            <img id="popupImg" src="">
+
+            <h3 id="popupTitle"></h3>
+
+            <a id="downloadBtn" download>
+                Download PNG
+            </a>
+
+        </div>
+
+    </div>
+
+    <footer class="site-footer">
+    <div class="footer-content">
+        <p class="copyright-text">&copy; 2026 All Rights Reserved.</p>
+        <p class="disclaimer-text">
+            <strong>Disclaimer:</strong> This website is a fan-made resource center. All Minecraft assets, transparent PNGs, and in-game item renders showcased here were individually captured via in-game screenshots by the creator. We do not own, claim ownership of, or sell any Minecraft assets, brands, or trademarks. All original intellectual property rights belong entirely to <strong>Mojang Studios</strong> and <strong>Microsoft</strong>. This site is not affiliated with, endorsed by, or associated with Mojang Studios in any official capacity.
+        </p>
+    </div>
+</footer>
+
+<!-- Firebase Core App SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<!-- Firebase Authentication Feature -->
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+
+    <script src="script.js"></script>
+
+    <!-- 🔐 LOGIN / SIGNUP MODAL BOX -->
+<div id="auth-modal" class="auth-overlay">
+    <div class="auth-box">
+        <h2 id="auth-title">Sign In to CrafterSpace</h2>
+        <p class="auth-subtitle">Access High-Quality Minecraft PNGs</p>
+        
+        <form id="auth-form" onsubmit="event.preventDefault();">
+            <!-- Email Input -->
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" id="auth-email" placeholder="Enter your email" required>
+            </div>
+            
+            <!-- Password Input -->
+            <div class="input-group" id="password-group">
+                <label>Password</label>
+                <input type="password" id="auth-password" placeholder="Enter password">
+            </div>
+
+            <!-- Forgot Password Link -->
+            <div class="form-options" id="forgot-link-area">
+                <a href="#" onclick="showForgotPassword()" class="forgot-btn">Forgot Password?</a>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="main-auth-btn" class="submit-btn">Sign In</button>
+        </form>
+
+        <div class="divider"><span>OR</span></div>
+
+        <!-- Google Sign-In Button -->
+        <button class="google-btn" onclick="handleGoogleLogin()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo">
+            Continue with Google
+        </button>
+
+        <!-- Toggle between Login and Signup -->
+        <p class="switch-auth-text">
+            <span id="auth-switch-prompt">Don't have an account?</span> 
+            <a href="#" id="auth-switch-link" onclick="toggleAuthMode()">Sign Up</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
