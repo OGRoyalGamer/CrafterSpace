@@ -362,6 +362,17 @@ body{
     z-index:2000;
 
     padding:10px 15px;
+
+    transition:0.4s ease;
+
+}
+
+/* Rotate Class */
+
+.rotate{
+
+    transform:rotate(90deg);
+
 }
 
 .side-menu{
@@ -464,6 +475,32 @@ input:checked + .slider::before{
     transform:translateX(27px);
 }
 
+
+/* GO To Top Button */
+
+#topBtn {
+    display: none; /* Starting mein hide rahega */
+    position: fixed; /* Screen par fix rahega */
+    bottom: 20px; /* Neeche se gap */
+    right: 20px; /* Right side se gap */
+    z-index: 99; /* Sabse upar dikhega */
+    border: none;
+    outline: none;
+    background-color: #555; /* Modern gray color */
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%; /* Ye button ko Gol (Circle) bana dega */
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s;
+}
+
+#topBtn:hover {
+    background-color: #333; /* Hover par color change */
+}
+
 /* =======================================
    PROFESSIONAL FOOTER & DISCLAIMER STYLE
    ======================================= */
@@ -501,6 +538,24 @@ body.dark-view .site-footer {
     border-top-color: #111827;
 }
 
-style.css ke bilkul END me paste karo:
+/* Mobile ke liye settings */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px; /* Text ko chota kar diya */
+        word-wrap: break-word; /* Text ko screen ke andar rakhne ke liye */
+    }
 
-`/* ========================= MOBILE RESPONSIVE FIX ========================= */``@media (max-width: 768px) {` `.hero h1 {` `font-size: 3rem; /* CrafterSpace text chhota */` `line-height: 1.1;` `word-break: break-word;` `}` `.hero p {` `font-size: 1.2rem;` `padding: 0 20px;` `}` `.hero-logo {` `width: 140px;` `height: auto;` `}` `.search-container {` `width: 100%;` `padding: 0 20px;` `box-sizing: border-box;` `}` `#searchInput {` `width: 100%;` `box-sizing: border-box;` `}` `.site-footer {` `width: 100%;` `box-sizing: border-box;` `padding: 25px 20px;` `}` `.footer-content {` `width: 100%;` `max-width: 100%;` `box-sizing: border-box;` `}` `.disclaimer-text {` `font-size: 0.95rem;` `line-height: 1.8;` `}``}`
+    .site-footer {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box; /* Box ko border ke andar fit rakhega */
+    }
+
+    .footer-content {
+        padding: 0 15px; /* Right side ka gap fix karne ke liye */
+    }
+
+    body {
+        overflow-x: hidden; /* Screen ko horizontal scroll hone se rokega */
+    }
+}
