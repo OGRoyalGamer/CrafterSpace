@@ -31,7 +31,6 @@ searchInput.addEventListener("keyup", () => {
 
 });
 
-
 // Popup Elements
 
 const popup =
@@ -126,6 +125,12 @@ function openMenu()
 document.getElementById(
 "sideMenu"
 ).style.left = "0";
+
+document.querySelector(
+".menu-btn"
+).classList.add(
+"rotate"
+);
 }
 
 function closeMenu()
@@ -133,4 +138,23 @@ function closeMenu()
 document.getElementById(
 "sideMenu"
 ).style.left = "-320px";
+document.querySelector(
+".menu-btn").classList.remove(
+"rotate"
+);
 }
+
+// Jab user scroll karega, button dikhega
+window.onscroll = function() {
+    var mybutton = document.getElementById("topBtn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+};
+
+// Jab click karenge, toh top par chale jayenge
+document.getElementById("topBtn").onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+};
