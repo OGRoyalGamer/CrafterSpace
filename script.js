@@ -1,3 +1,11 @@
+// Dark Mode
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+}
+
+
 // Search Function
 
 const searchInput =
