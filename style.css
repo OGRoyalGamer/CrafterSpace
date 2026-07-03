@@ -1,3 +1,65 @@
+/* Dark Mode */
+
+.about-page {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode-btn {
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    padding: 8px 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: red;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    z-index: 1000;
+}
+
+.dark-mode-btn:hover {
+    transform:scale(0.93);
+}
+
+.dark-mode-btn:active {
+    transform: scale(0.83);
+}
+
+.dark-mode {
+    background-color: white;
+    color: black;
+
+    transition: 0.6s ease;
+
+}
+
+
+/* About ME */
+
+.about-heading {
+    text-align: center;
+    margin-top: 200px;
+    font-family: Arial;
+
+}
+
+.about-paragraph {
+    text-align: center;
+    font-family: Arial;
+    
+}
+
+
 *{
     margin:0;
     padding:0;
